@@ -16,7 +16,6 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
 /* Text Art Styling */
@@ -40,7 +39,7 @@ body {
 
 /* Basic Sections */
 .hero {
-    text-align: left;
+    text-align: center;
     margin: 40px 0;
     padding: 20px;
     border: 1px solid #00ff00;
@@ -83,7 +82,7 @@ body {
 }
 
 .blog-posts h2 {
-    text-align: left;
+    text-align: center;
     font-size: 1.5rem;
     margin-bottom: 30px;
     color: #00ff00;
@@ -94,7 +93,6 @@ body {
 .posts-list {
     list-style: none;
     padding: 0;
-    text-align: left;
 }
 
 .posts-list li {
