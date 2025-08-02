@@ -30,10 +30,11 @@ body {
     color: #00ff00;
     line-height: 1.2;
     overflow-x: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     white-space: pre;
     word-wrap: break-word;
+    text-align: center;
 }
 
 /* Basic Sections */
@@ -92,6 +93,20 @@ body {
 
 .posts-list a:hover {
     text-decoration: underline;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: #00ff00;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.like-btn:hover {
+    color: #00cc00;
 }
 
 .post-date {
