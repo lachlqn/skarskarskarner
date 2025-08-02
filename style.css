@@ -1,4 +1,17 @@
 /* Minimal CSS - Text Art Focused */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden; /* Optional: disables vertical scroll */
+    height: 100%;
+}
+
+.main-container {
+    min-height: 100vh;      /* Fill full viewport */
+    box-sizing: border-box; /* Prevent padding overflow */
+    overflow: hidden;       /* Hide stray scrollbars */
+}
+
 * {
     margin: 0;
     padding: 0;
