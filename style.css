@@ -2,14 +2,12 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-y: hidden; /* Optional: disables vertical scroll */
     height: 100%;
 }
 
 .main-container {
     min-height: 100vh;      /* Fill full viewport */
     box-sizing: border-box; /* Prevent padding overflow */
-    overflow: hidden;       /* Hide stray scrollbars */
 }
 
 * {
@@ -29,6 +27,12 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Text Art Styling */
