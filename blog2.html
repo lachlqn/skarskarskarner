@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked Style Demo - My Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hacked Jekyll Style */
+        body {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #00ff00;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .json-container {
+            background: #000;
+            border: 1px solid #00ff00;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+        
+        .json-object {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .json-key {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .json-value {
+            color: #00cc00;
+        }
+        
+        .json-string {
+            color: #00ff00;
+        }
+        
+        .json-number {
+            color: #00cc00;
+        }
+        
+        .json-array {
+            color: #00ff00;
+        }
+        
+        .json-object-inner {
+            margin-left: 20px;
+        }
+        
+        .json-punct {
+            color: #00ff00;
+        }
+        
+        .json-link {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        
+        .json-link:hover {
+            color: #00cc00;
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            color: #00cc00;
+        }
+        
+        .typing-effect {
+            border-right: 2px solid #00ff00;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #00ff00; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="json-container">
+            <div class="json-object">
+                <span class="json-punct">{</span><br>
+                <div class="json-object-inner">
+                    <span class="json-key">"name"</span><span class="json-punct">:</span> <span class="json-string">"skar_skar_skarner"</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"title"</span><span class="json-punct">:</span> <span class="json-string">"Software Developer & Digital Nomad"</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"location"</span><span class="json-punct">:</span> <span class="json-string">"Planet Earth"</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"description"</span><span class="json-punct">:</span> <span class="json-string typing-effect">"Building digital experiences and exploring the world"</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"skills"</span><span class="json-punct">:</span> <span class="json-punct">[</span><br>
+                    <div class="json-object-inner">
+                        <span class="json-string">"JavaScript"</span><span class="json-punct">,</span><br>
+                        <span class="json-string">"Python"</span><span class="json-punct">,</span><br>
+                        <span class="json-string">"React"</span><span class="json-punct">,</span><br>
+                        <span class="json-string">"Node.js"</span><span class="json-punct">,</span><br>
+                        <span class="json-string">"Docker"</span><span class="json-punct">,</span><br>
+                        <span class="json-string">"AWS"</span><br>
+                    </div>
+                    <span class="json-punct">]</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"contact"</span><span class="json-punct">:</span> <span class="json-punct">{</span><br>
+                    <div class="json-object-inner">
+                        <span class="json-key">"email"</span><span class="json-punct">:</span> <a href="mailto:hello@example.com" class="json-link">"hello@example.com"</a><span class="json-punct">,</span><br>
+                        <span class="json-key">"github"</span><span class="json-punct">:</span> <a href="https://github.com" class="json-link">"github.com/skarskarskarner"</a><span class="json-punct">,</span><br>
+                        <span class="json-key">"linkedin"</span><span class="json-punct">:</span> <a href="https://linkedin.com" class="json-link">"linkedin.com/in/skarskarskarner"</a><br>
+                    </div>
+                    <span class="json-punct">}</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"blog_posts"</span><span class="json-punct">:</span> <span class="json-punct">[</span><br>
+                    <div class="json-object-inner">
+                        <span class="json-punct">{</span><br>
+                        <div class="json-object-inner">
+                            <span class="json-key">"title"</span><span class="json-punct">:</span> <span class="json-string">"How to contact almost anyone"</span><span class="json-punct">,</span><br>
+                            <span class="json-key">"date"</span><span class="json-punct">:</span> <span class="json-string">"2025-08-03"</span><span class="json-punct">,</span><br>
+                            <span class="json-key">"url"</span><span class="json-punct">:</span> <a href="blog1.html" class="json-link">"blog1.html"</a><span class="json-punct">,</span><br>
+                            <span class="json-key">"likes"</span><span class="json-punct">:</span> <span class="json-number">42</span><br>
+                        </div>
+                        <span class="json-punct">}</span><span class="json-punct">,</span><br>
+                        <span class="json-punct">{</span><br>
+                        <div class="json-object-inner">
+                            <span class="json-key">"title"</span><span class="json-punct">:</span> <span class="json-string">"The art of problem solving"</span><span class="json-punct">,</span><br>
+                            <span class="json-key">"date"</span><span class="json-punct">:</span> <span class="json-string">"2025-07-15"</span><span class="json-punct">,</span><br>
+                            <span class="json-key">"url"</span><span class="json-punct">:</span> <a href="#" class="json-link">"blog2.html"</a><span class="json-punct">,</span><br>
+                            <span class="json-key">"likes"</span><span class="json-punct">:</span> <span class="json-number">28</span><br>
+                        </div>
+                        <span class="json-punct">}</span><br>
+                    </div>
+                    <span class="json-punct">]</span><span class="json-punct">,</span><br>
+                    <span class="json-key">"status"</span><span class="json-punct">:</span> <span class="json-string">"I miss my kind"</span><br>
+                </div>
+                <span class="json-punct">}</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
