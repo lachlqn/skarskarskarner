@@ -112,19 +112,7 @@ body {
     text-decoration: underline;
 }
 
-.like-btn {
-    background: none;
-    border: none;
-    color: #00ff00;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-left: 10px;
-    padding: 0;
-}
 
-.like-btn:hover {
-    color: #00cc00;
-}
 
 .post-date {
     color: #00ff00;
