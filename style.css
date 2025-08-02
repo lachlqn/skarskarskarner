@@ -51,6 +51,23 @@ body {
     color: #00ff00;
 }
 
+.hero-text-art {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-text-art pre {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8px;
+    color: #00ff00;
+    line-height: 1.1;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    word-wrap: break-word;
+}
+
 .description {
     font-size: 1rem;
     color: #00ff00;
