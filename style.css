@@ -202,10 +202,146 @@ footer {
     text-decoration: underline;
 }
 
+/* CRT TV Effect Styles */
+.crt-container {
+    position: relative;
+    background: #000;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 
+        inset 0 0 50px rgba(0, 255, 0, 0.1),
+        0 0 100px rgba(0, 0, 0, 0.8);
+    transform: perspective(1000px) rotateX(2deg);
+}
+
+.crt-screen {
+    position: relative;
+    background: radial-gradient(ellipse at center, #001100 0%, #000000 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    filter: 
+        drop-shadow(0 0 10px rgba(0, 255, 0, 0.3))
+        drop-shadow(0 0 20px rgba(0, 255, 0, 0.1));
+}
+
+/* Scanlines Effect */
+.crt-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        transparent 50%, 
+        rgba(0, 255, 0, 0.03) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: scanlines 0.1s linear infinite;
+}
+
+/* Flicker/Static Effect */
+.crt-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 0, 0.06) 0%, transparent 50%);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 999;
+    animation: flicker 0.15s infinite linear alternate;
+}
+
+/* Screen Curvature */
+.crt-content {
+    position: relative;
+    filter: 
+        brightness(1.1) 
+        contrast(1.2)
+        sepia(0.05)
+        hue-rotate(80deg);
+    transform: 
+        perspective(1200px) 
+        rotateX(1deg) 
+        scale(0.98);
+}
+
+/* Enhanced Phosphor Glow */
+.crt-content * {
+    text-shadow: 
+        0 0 2px currentColor,
+        0 0 5px currentColor,
+        0 0 8px currentColor,
+        0 0 12px rgba(0, 255, 0, 0.6);
+}
+
+/* Animations */
+@keyframes scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
+@keyframes flicker {
+    0% { 
+        opacity: 0.03;
+        filter: brightness(1.02);
+    }
+    50% { 
+        opacity: 0.08;
+        filter: brightness(0.98);
+    }
+    100% { 
+        opacity: 0.05;
+        filter: brightness(1.01);
+    }
+}
+
+/* Vignette Effect */
+.crt-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 30%,
+        rgba(0, 0, 0, 0.2) 70%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    pointer-events: none;
+    z-index: 998;
+    border-radius: 10px;
+}
+
+/* CRT-specific adjustments */
+.crt-content body {
+    background: transparent;
+}
+
+.crt-content .main-container {
+    background: transparent;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     body {
         padding: 10px;
+    }
+    
+    .crt-container {
+        margin: 10px;
+        padding: 20px;
+        transform: perspective(800px) rotateX(1deg);
     }
     
     .text-art pre {
